@@ -1,0 +1,155 @@
+body {
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+	font-family: Lora, sans-serif;
+	padding: 2rem;
+	text-align: center;
+	background-color: black;
+	color: #ffffff;
+}
+
+h1 {
+	color: #fff000;
+}
+
+#game {
+	display: flex;
+	justify-content: center;
+	gap: 4rem;
+	align-items: baseline;
+}
+
+#your-choice,
+#comp-choice {
+	width: 6rem;
+	height: 6rem;
+	border: solid 1px #999;
+	border-radius: 3rem;
+	font-size: 4rem;
+	line-height: 7rem;
+}
+label {
+	font-size: 2rem;
+	
+}
+
+/* your choice */
+
+#rock-rock:checked ~ #game #your-choice::before,
+#rock-paper:checked ~ #game #your-choice::before,
+#rock-scissors:checked ~ #game #your-choice::before {
+	content: "✊";
+}
+
+#paper-rock:checked ~ #game #your-choice::before,
+#paper-paper:checked ~ #game #your-choice::before,
+#paper-scissors:checked ~ #game #your-choice::before {
+	content: "🖐";
+}
+
+#scissors-rock:checked ~ #game #your-choice::before,
+#scissors-paper:checked ~ #game #your-choice::before,
+#scissors-scissors:checked ~ #game #your-choice::before {
+	content: "✌";
+}
+
+/* computer choice */
+
+#rock-rock:checked ~ #game #comp-choice::before,
+#paper-rock:checked ~ #game #comp-choice::before,
+#scissors-rock:checked ~ #game #comp-choice::before {
+	content: "✊";
+}
+
+#rock-paper:checked ~ #game #comp-choice::before,
+#paper-paper:checked ~ #game #comp-choice::before,
+#scissors-paper:checked ~ #game #comp-choice::before {
+	content: "🖐";
+}
+
+#rock-scissors:checked ~ #game #comp-choice::before,
+#paper-scissors:checked ~ #game #comp-choice::before,
+#scissors-scissors:checked ~ #game #comp-choice::before {
+	content: "✌";
+}
+
+#choices {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+#choices > div {
+	position: relative;
+	width: 3rem;
+	height: 3rem;
+	border: solid 1px #999;
+	border-radius: 1.5rem;
+	line-height: 3.5rem;
+}
+
+label {
+	position: absolute;
+	inset: 0;
+	animation: loop 0.3s infinite;
+}
+
+label:nth-of-type(1) {
+	animation-delay: 0s;
+}
+
+label:nth-of-type(2) {
+	animation-delay: 0.1s;
+}
+
+label:nth-of-type(3) {
+	animation-delay: 0.2s;
+}
+
+@keyframes loop {
+	from {
+		z-index: 1;
+	}
+	to {
+		z-index: 3;
+	}
+}
+
+button {
+	margin: 2rem auto 0;
+	background-color: #fff000;
+	color: Black;
+	border: 0;
+	padding: 10px 16px;
+	border-radius: 5px;
+	
+	display: none;
+}
+
+#result {
+	backround-color: lightgrey;
+	display: none;
+}
+
+input[type="radio"]:checked ~ button,
+input[type="radio"]:checked ~ #result {
+	display: block;
+}
+
+
+#rock-rock:checked ~ #result::before,
+#paper-paper:checked ~ #result::before,
+#scissors-scissors:checked ~ #result::before {
+	content: "It's a tie";
+}
+
+#rock-paper:checked ~ #result::before,
+#paper-scissors:checked ~ #result::before,
+#scissors-rock:checked ~ #result::before {
+	content: "You lost!";
+}
+
+#paper-rock:checked ~ #result::before,
+#scissors-paper:checked ~ #result::before,
+#rock-scissors:checked ~ #result::before {
+	content: "You Won!";
+}
